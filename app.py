@@ -6,7 +6,7 @@ from tensorflow.keras.models import load_model
 
 # ---- Page config ----
 st.set_page_config(
-    page_title="Credit Card Fraud Detection Demo",
+    page_title="Credit Card Fraud Detection",
     page_icon="💳",
     layout="centered"
 )
@@ -50,7 +50,7 @@ st.markdown(
 )
 
 # ---- Title ----
-st.title("💳 Credit Card Fraud Detection – Input Builder")
+st.title("💳 Credit Card Fraud Detection")
 st.caption("Enter recent transaction details. The app will compute the derived features used for prediction.")
 
 # ================== SECTION 1: AMOUNTS ==================
@@ -143,5 +143,6 @@ if show:
         st.error(f"**Model Prediction (Fraud Probability):** {prediction[0][0]:.4f} – Likely Fraudulent Transaction")
     else:
         st.success(f"**Model Prediction (Fraud Probability):** {prediction[0][0]:.4f} – Likely Legitimate Transaction")
+
 
 
